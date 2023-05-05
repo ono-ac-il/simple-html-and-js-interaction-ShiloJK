@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="party"> קוד קופון
+        <input id="inp1" type="text">
+    </label>
+    <button id="BTN">לחץ</button>
+    <p id="res"></p>
+    <script>
+        document.getElementById("BTN").addEventListener('click', getCoffe)
+        function getCoffe() {
+            var coupons = ["2345", "5357", "6467"]
+            var coupon = document.getElementById("inp1").value
+            if (coupons.indexOf(coupon) != -1) {
+                document.getElementById("res").innerHTML = "מגיע לך קפה חינם ☕"
+            }
+            else {
+                document.getElementById("res").innerHTML = "לא קיים קופון"
+            }
+        }
+    </script>
+</body>
+
+</html>

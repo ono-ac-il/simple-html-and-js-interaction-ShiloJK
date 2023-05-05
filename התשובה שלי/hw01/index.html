@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="party"> מאגר מפלגות
+        <input id="inp1" type="text">
+    </label>
+    <button id="BTN">חיפוש</button>
+    <p id="res"></p>
+    <script>
+        document.getElementById("BTN").addEventListener('click', FindThePartyName)
+        function FindThePartyName() {
+            var partys = ["מרץ", "ליכוד", "ציונות הדתית"]
+            var partyNickname = ["מרץ", "מחל", "ט"]
+            const nickname = document.getElementById('inp1').value
+            for (var i = 0; i < partys.length; i++) {
+                if (nickname == partyNickname[i]) {
+                    document.getElementById('res').innerHTML = partys[i]
+                    break
+                }
+                else {
+                    document.getElementById('res').innerHTML = "לא נמצא שום מפלגה"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
